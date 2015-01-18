@@ -5,7 +5,7 @@
 
 #ifndef NO_DEFAULT_FONT
 
-extern PROGMEM char DEFAULT_FONT[][6];
+extern const char DEFAULT_FONT[][6];
 
 #endif /* NO_DEFAULT_FONT */
 
@@ -47,7 +47,7 @@ public:
      // the 2D font array, the number of characters in the font,
      // the width of the font characters, and the offset of
      // where the font starts.
-     Font(char *font, int characters, int width, int offset = 0);
+     Font(const char *font, int characters, int width, int offset = 0);
      
      // First dimension
      FontWrapper operator[](int index);
@@ -75,7 +75,7 @@ private:
      int m_chars;
      
      // The font pointer
-     char *m_font;
+     const char *m_font;
 };
 
 #endif /* FONT_H_ */

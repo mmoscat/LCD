@@ -5,7 +5,7 @@
 
 // 8x6 default font copied from:
 // http://www.piclist.com/techref/datafile/charset/8x6.htm
-PROGMEM char DEFAULT_FONT[][6] = {
+const char DEFAULT_FONT[][6] PROGMEM = {
      {0x00, 0x64, 0x18, 0x04, 0x64, 0x18},
      {0x00, 0x3c, 0x40, 0x40, 0x20, 0x7c},
      {0x00, 0x0c, 0x30, 0x40, 0x30, 0x0c},
@@ -271,7 +271,7 @@ Font::Font()
 // to the 2D font array, the number of characters in the
 // font, the width of the font characters, and the
 // offset of where the font starts.
-Font::Font(char *font, int characters, int width, int offset)
+Font::Font(const char *font, int characters, int width, int offset)
 {
      // Initialize the members for custom fonts
      m_font = font;
